@@ -68,7 +68,7 @@ class MyfilesController < ApplicationController
   end
 
   def downloadpdf
-    file_name=Myfile.find(params[:id])
+    myfile=Myfile.find(params[:id])
     filepath = Rails.root.join('public',myfile.filename)
     stat = File::stat(filepath)
     send_file(filepath, :filename => myfile.filename, :length => stat.size)
