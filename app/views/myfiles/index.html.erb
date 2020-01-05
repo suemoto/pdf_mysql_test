@@ -21,6 +21,7 @@
         <td><%= link_to 'Show', myfile %></td>
         <td><%= link_to 'Edit', edit_myfile_path(myfile) %></td>
         <td><%= link_to 'Destroy', myfile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'download',donwload_pdf_path(myfile), :class => 'btn btn-default btn-xs' %></td>
       </tr>
     <% end %>
   </tbody>

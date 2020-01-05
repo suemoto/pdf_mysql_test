@@ -67,6 +67,13 @@ class MyfilesController < ApplicationController
     end
   end
 
+  def downloadpdf
+    file_name=Myfile.find(params[:id])
+    filepath = Rails.root.join('public',myfile.filename)
+    stat = File::stat(filepath)
+    send_file(filepath, :filename => myfile.filename, :length => stat.size)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_myfile
