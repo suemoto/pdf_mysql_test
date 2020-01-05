@@ -12,21 +12,21 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :title, "タイトル" %>
+      <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :file %>
-    <%= form.file_field :file %>
+    <%= form.label :comment, "内容、説明" %>
+      <%= form.text_field :comment %>
   </div>
 
   <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_field :comment %>
+    <%= form.label :file, "資料を添付できます" %>
+      <%= form.file_field :file %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "作成"%>
   </div>
 <% end %>
