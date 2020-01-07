@@ -9,14 +9,16 @@
           %li= message
   %div  
     = form.label :title, class:"art-label" do
-      .art-title
-        タイトル
+      %p.art-new-p タイトル
       = form.text_field :title, placeholder:"タイトル、概要を記入してください", class:"art-title"
   %div
-    = form.label :comment, "内容、説明", class:"art-label"
-    = form.text_area :comment, placeholder:"内容を記入してください", class:"art-description"
+    = form.label :comment, "内容、説明", class:"art-label" do
+      %p.art-new-p 詳細な内容
+
+      = form.text_area :comment, placeholder:"内容を記入してください", class:"art-description"
   %div
-    = form.label :file, "資料を添付できます", class:"art-label"
-    = form.file_field :file, class:"art-document"
+    = form.label :file, "資料を添付できます", class:"art-label" do
+      %p.art-new-p 添付資料
+      = form.file_field :file, class:"art-document"
   .actions
     = form.submit "作成", class:"art-submit"

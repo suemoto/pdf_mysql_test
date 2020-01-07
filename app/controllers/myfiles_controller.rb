@@ -5,7 +5,7 @@ class MyfilesController < ApplicationController
   # GET /myfiles
   # GET /myfiles.json
   def index
-    @myfiles = Myfile.all
+    @myfiles = Myfile.all.order("created_at DESC")
   end
 
   # GET /myfiles/1
