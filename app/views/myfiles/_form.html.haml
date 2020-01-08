@@ -1,0 +1,28 @@
+.art-form-main
+  = form_with(model: myfile, local: true) do |form|
+    - if myfile.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(myfile.errors.count, "error")
+          prohibited this myfile from being saved:
+        %ul
+          - myfile.errors.full_messages.each do |message|
+            %li= message
+    %div  
+      = form.label :title, class:"art-label" do
+        %p.art-new-p タイトル
+        = form.text_field :title, placeholder:"タイトル、概要を記入してください", class:"art-title"
+    %div
+      = form.label :comment, "内容、説明", class:"art-label" do
+        %p.art-new-p 詳細な内容
+
+        = form.text_area :comment, placeholder:"内容を記入してください", class:"art-description"
+    %div
+      = form.label :file, "資料を添付できます", class:"art-label" do
+        %p.art-new-p 添付資料
+        .art-file
+          ここをクリックしてファイルをアップロードできます
+
+        = form.file_field :file, class:"art-document"
+    .art-submit-container
+      = form.submit "作成", id:"art-submit"

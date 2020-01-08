@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  = @myfile.title
+%p
+  = @myfile.comment
+%td= link_to @myfile.filename ,donwload_pdf_path(@myfile), :class => 'btn btn-default btn-xs'
+= link_to 'Edit', edit_myfile_path(@myfile)
+
+%td= link_to 'Destroy', @myfile, method: :delete, data: { confirm: 'Are you sure?' }
+|
+= link_to 'Back', myfiles_path
