@@ -6,9 +6,9 @@
       新着記事
     .art-index-main__contents  
       - @myfiles.each do |myfile|
-        = link_to("myfiles/#{myfile.id}", class:"art-show-link" ) do
-          .title-block
-            = myfile.title.truncate(20, omission: '...')
+        .title-block
+          = link_to "myfiles/#{myfile.id}", class:"art-show-link" do
+            = myfile.title.truncate(40, omission: '...')
           -# %tr
             -# - link_to
             -# %td= myfile.title

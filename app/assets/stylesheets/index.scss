@@ -7,12 +7,16 @@
 
     }
     &__contents {
-      .art-show-link {
-        font-size: 25px;
-        .title-block {
+      .title-block {
           margin: 15px 0 15px 0;
-          // color: 
-        }
+          .art-show-link {
+          font-size: 25px;
+          text-decoration: none;
+        
+          }
+      }
+      .title-block:hover {
+        background-color: #eeeeee;
       }
     }
   }
