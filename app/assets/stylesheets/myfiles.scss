@@ -21,9 +21,26 @@
   font-size: 20px;
   font-weight: bold;
 }
-// .art-document {
-//   // display: none;
-// }
-.art-submit {
-  height: 40px;
+.art-file {
+  // background-color: #123456;
+  height: 50px;
+  width: 400px;
+  border: 1px solid black;
+}
+.art-document {
+  display: none;
+
+}
+
+#art-submit {
+  height: 50px;
+  width: 200px;
+  line-height: 100px;
+  padding: 10px 0;
+  margin: 20px 0;
+  // border-style: none;
+}
+
+.art-show-link {
+  font-size: large;
 }
