@@ -1,0 +1,41 @@
+.header {
+  height: 100px;
+  display: flex;
+  .logo-link {
+    text-decoration: none;
+    .header-logo {
+      display: flex;
+      &__img {
+        height: 100px;
+        width: inherit;
+      }
+      .sight-name {
+        background-color: #eeeeee;
+      }
+    }
+  }
+  &__right {
+    &__search {
+      background-color: #eeeeee;
+      height: 50px;
+      width: 100%;
+    }
+    &__btn {
+      display: flex;
+      .sign-up {
+        border: 1px solid black;
+        height: 45px;
+        width: 80px;
+        box-sizing: border-box;
+        border-radius: 5px;
+      }
+      .sign-in {
+        border: 1px solid black;
+        height: 45px;
+        width: 80px;
+        box-sizing: border-box;
+        border-radius: 5px;
+      }
+    }
+  }
+}
