@@ -1,19 +1,20 @@
-
 = render "header"
-.art-index-main
-  .art-index-main__new
-    新着記事
-  .art-index-main__contents  
-    - @myfiles.each do |myfile|
-      = link_to("myfiles/#{myfile.id}", class:"art-show-link" ) do
-        .title-block
-          = myfile.title.truncate(20, omission: '...')
-        -# %tr
-          -# - link_to
-          -# %td= myfile.title
-          -# %td= link_to 'Show', myfile
-          -# %td= link_to 'Edit', edit_myfile_path(myfile)
-          -# %td= link_to 'Destroy', myfile, method: :delete, data: { confirm: 'Are you sure?' }
+.art-index-wrapper
+  
+  .art-index-main
+    .art-index-main__new
+      新着記事
+    .art-index-main__contents  
+      - @myfiles.each do |myfile|
+        = link_to("myfiles/#{myfile.id}", class:"art-show-link" ) do
+          .title-block
+            = myfile.title.truncate(20, omission: '...')
+          -# %tr
+            -# - link_to
+            -# %td= myfile.title
+            -# %td= link_to 'Show', myfile
+            -# %td= link_to 'Edit', edit_myfile_path(myfile)
+            -# %td= link_to 'Destroy', myfile, method: :delete, data: { confirm: 'Are you sure?' }
 
 
-  = link_to '新規投稿', new_myfile_path
+    = link_to '新規投稿', new_myfile_path

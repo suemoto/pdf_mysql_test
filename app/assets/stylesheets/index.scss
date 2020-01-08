@@ -1,15 +1,18 @@
-.art-index-main {
-  padding: 50px 100px;
-  &__new{
-    font-size: 35px;
+.art-index-wrapper {
+  padding: 0 100px;
+  .art-index-main {
+    // padding: 50px 100px;
+    &__new{
+      font-size: 35px;
 
-  }
-  &__contents {
-    .art-show-link {
-      font-size: 25px;
-      .title-block {
-        margin: 15px 0 15px 0;
-        // color: 
+    }
+    &__contents {
+      .art-show-link {
+        font-size: 25px;
+        .title-block {
+          margin: 15px 0 15px 0;
+          // color: 
+        }
       }
     }
   }
