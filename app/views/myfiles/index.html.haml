@@ -8,7 +8,9 @@
       - @myfiles.each do |myfile|
         .title-block
           = link_to "myfiles/#{myfile.id}", class:"art-show-link" do
-            = myfile.title.truncate(40, omission: '...')
+            = myfile.title.truncate(43, omission: '...')
+          .title-block__venue
+            開催都道府県
           -# %tr
             -# - link_to
             -# %td= myfile.title
@@ -17,4 +19,4 @@
             -# %td= link_to 'Destroy', myfile, method: :delete, data: { confirm: 'Are you sure?' }
 
 
-    = link_to '新規投稿', new_myfile_path
+    = link_to '新規投稿', new_myfile_path, class:"art-new-link"

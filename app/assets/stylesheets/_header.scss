@@ -2,16 +2,22 @@
   padding: 10px 100px;
   height: 120px;
   display: flex;
+  // border-bottom: 1px solid gray;
+  box-shadow: rgba(0,0,0,0.18)0px 2px 0px;
   .logo-link {
     text-decoration: none;
     .header-logo {
       display: flex;
+      position: relative;
       &__img {
         height: 100px;
         width: inherit;
       }
       .sight-name {
         // background-color: #eeeeee;
+        text-shadow: 2px 2px white;
+        position: absolute;
+        top: 50%;
         font-size: 35px;
         color:green;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -22,10 +28,12 @@
     position: relative;
     margin-left: 30px;
     &__search {
-      background-color: #eeeeee;
+      // background-color: #eeeeee;
       height: 50px;
       width: 600px;
       border-radius: 5px;
+      border: 1px solid gray;
+      
     }
     &__btn {
       display: flex;
