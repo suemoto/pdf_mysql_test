@@ -1,4 +1,4 @@
-require 'Kconv'
+# require 'Kconv'
 class MyfilesController < ApplicationController
   before_action :set_myfile, only: [:show, :edit, :update, :destroy]
 
