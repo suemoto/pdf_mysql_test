@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'myfiles#index'
   get 'myfiles/downloadpdf/:id'=> 'myfiles#downloadpdf' ,as: :donwload_pdf
   resources :myfiles 
     # get 'myfiles/downloadpdf/download'=> 'myfiles#downloadpdf'
