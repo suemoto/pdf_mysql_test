@@ -12,7 +12,7 @@
         = link_to new_myfile_path, class:"art-new-link" do
           .sign-up 新規投稿
         -# = link_to("#",id:"sign-out") do
-        = link_to destroy_user_session_path, method: :delete, id:"sign-out" do
+        = link_to destroy_user_session_path, method: :delete, class:"sign-out" do
           .sign-in ログアウト
     - else
       .header__right__btn
