@@ -6,13 +6,21 @@
         Jungle
   .header__right
     .header__right__search
+    - if user_signed_in?
+      .header__right__btn
+        = link_to("#",id:"sign-up") do
 
-    .header__right__btn
-      = link_to("#",id:"sign-up") do
+          .sign-up 新規投稿
+        = link_to("#",id:"sign-out") do
 
-        .sign-up 新規会員登録
-      = link_to("#",id:"sign-in") do
+          .sign-in ログアウト
+    - else
+      .header__right__btn
+        = link_to("#",id:"sign-up") do
 
-        .sign-in ログイン
+          .sign-up 新規会員登録
+        = link_to("#",id:"sign-in") do
+
+          .sign-in ログイン
 -#       %p#notice= notice
 -# %h1　~エンジニアの勉強会共有サイト~
