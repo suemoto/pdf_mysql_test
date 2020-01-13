@@ -8,8 +8,8 @@
     .header__right__search
     - if user_signed_in?
       .header__right__btn
-        = link_to("myfiles/new",id:"sign-up") do
-
+        -# = link_to("myfiles/new",id:"sign-up") do
+        = link_to new_myfile_path, class:"art-new-link" do
           .sign-up 新規投稿
         -# = link_to("#",id:"sign-out") do
         = link_to destroy_user_session_path, method: :delete, id:"sign-out" do
