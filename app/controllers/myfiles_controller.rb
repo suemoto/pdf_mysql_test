@@ -93,13 +93,13 @@ class MyfilesController < ApplicationController
       elsif file_object.size > 10.megabyte
         result = 'ファイルサイズは10MBまでです。'
       else
-        File.open("public/#{file_name}", 'wb') { |f| f.write(file_object.read) }
+        File.open("public/#{file_name}", 'wb') { |f| f.write(file_object.read) }    #本番環境では.toutf8がエラーになるので削除。本来はfile_name.toutf8
         result = "success"
       end
       return result
     end
 
     def deleteipdf(file_name)
-      File.unlink "public/"+file_name
+      File.unlink "public/"+file_name   #本番環境では.toutf8がエラーになるので削除。本来はfile_name.toutf8だった
     end
 end
