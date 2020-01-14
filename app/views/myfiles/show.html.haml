@@ -3,6 +3,8 @@
   = @myfile.title
 %p
   = @myfile.comment
+%p
+  = @myfile.address
 %td= link_to @myfile.filename ,donwload_pdf_path(@myfile), :class => 'btn btn-default btn-xs'
 %script{:async => "", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAP_API']}&callback=initMap"}
 :javascript
@@ -12,7 +14,7 @@
   function initMap() {
     geocoder = new google.maps.Geocoder();
     geocoder.geocode({
-    'address': '東京都新宿区西新宿4-29' //住所
+    'address': myfile.address //住所
     }, function(results, status) {
       if (status === google.maps.GeocoderStatus.OK) {
       map = new google.maps.Map(document.getElementById('gmap'), {
