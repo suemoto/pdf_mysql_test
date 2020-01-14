@@ -4,7 +4,7 @@
 %p
   = @myfile.comment
 %td= link_to @myfile.filename ,donwload_pdf_path(@myfile), :class => 'btn btn-default btn-xs'
-%script{:async => "", :src => "https://maps.googleapis.com/maps/api/js?key=ENV['GOOGLE_MAP_API']&callback=initMap"}
+%script{:async => "", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAP_API']}&callback=initMap"}
 :javascript
   var map;
     var marker;
@@ -36,7 +36,7 @@
   }
 #gmap
 
-- if user_signed_in? && current_user.id? == @myfile.user_id 
+- if user_signed_in? && current_user.id == @myfile.user_id 
   = link_to 'Edit', edit_myfile_path(@myfile)
 
   = link_to 'Destroy', @myfile, method: :delete, data: { confirm: 'Are you sure?' }
