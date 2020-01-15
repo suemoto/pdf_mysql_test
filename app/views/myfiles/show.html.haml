@@ -11,7 +11,8 @@
   var map;
   var marker;
   var geocoder;
-  var address = document.getElementById('address');
+  var address = document.getElementById('address').toString();
+
   function initMap() {
     geocoder = new google.maps.Geocoder();
     geocoder.geocode({
