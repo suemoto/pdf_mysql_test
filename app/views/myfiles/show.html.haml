@@ -3,7 +3,7 @@
   = @myfile.title
 %p
   = @myfile.comment
-%p#address
+#address
   = @myfile.address
 %td= link_to @myfile.filename ,donwload_pdf_path(@myfile), :class => 'btn btn-default btn-xs'
 %script{:async => "", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAP_API']}&callback=initMap"}
