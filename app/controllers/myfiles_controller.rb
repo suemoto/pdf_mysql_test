@@ -25,7 +25,7 @@ class MyfilesController < ApplicationController
   # POST /myfiles
   # POST /myfiles.json
   def create
-    @myfile = Myfile.new(myfile_params)
+    @myfile = Myfile.create(myfile_params)
 
     file = myfile_params[:file]
     file_name = file.original_filename
