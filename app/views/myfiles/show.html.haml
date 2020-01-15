@@ -14,7 +14,7 @@
   function initMap() {
     geocoder = new google.maps.Geocoder();
     geocoder.geocode({
-    'address': #{@myfile.addrss} //住所
+    'address': ${@myfile.addrss} //住所
     }, function(results, status) {
       if (status === google.maps.GeocoderStatus.OK) {
       map = new google.maps.Map(document.getElementById('gmap'), {
