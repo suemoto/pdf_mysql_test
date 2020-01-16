@@ -25,7 +25,7 @@ class MyfilesController < ApplicationController
   # POST /myfiles
   # POST /myfiles.json
   def create
-    @myfile = Myfile.new(myfile_params)
+    @myfile = Myfile.create(myfile_params)
 
     file = myfile_params[:file]
     file_name = file.original_filename
@@ -82,7 +82,7 @@ class MyfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def myfile_params
-      params.require(:myfile).permit(:title, :file, :comment).merge(user_id: current_user.id)
+      params.require(:myfile).permit(:title, :file, :comment, :address).merge(user_id: current_user.id)
     end
 
     def uploadpdf(file_object,file_name)
