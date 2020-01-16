@@ -11,12 +11,12 @@
   var map;
   var marker;
   var geocoder;
-  var address = document.getElementById('#address').toString();
-
+  var art_address = document.getElementById('address').value;
+  console.log(@myfile)
   function initMap() {
     geocoder = new google.maps.Geocoder();
     geocoder.geocode({
-    'address': `${address}` //住所
+    'address': art_address//住所
     }, function(results, status) {
       if (status === google.maps.GeocoderStatus.OK) {
       map = new google.maps.Map(document.getElementById('gmap'), {
