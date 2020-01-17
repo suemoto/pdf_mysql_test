@@ -1,9 +1,8 @@
 class ArticleMailer < ApplicationMailer
   default from: 'n.s.bdash@gmail.com'
 
-  def art_new_mailer(title, description, user)
-    @title = title
-    @description = description
+  def art_new_mailer(myfile,user)
+    @myfile = myfile
     @user = user
 
     mail(
