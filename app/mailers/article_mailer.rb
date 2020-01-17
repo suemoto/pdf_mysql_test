@@ -5,11 +5,7 @@ class ArticleMailer < ApplicationMailer
     @myfile = myfile
     @user = user
 
-    mail(
-      subject: "新規記事を作成しました", #メールのタイトル
-      to: @user.email #宛先
-    ) do |format|
-      format.text
-    end
+    mail to: user.email  #宛先
+         subject: "新規記事を作成しました", #メールのタイトル
   end
 end
