@@ -36,7 +36,7 @@ class MyfilesController < ApplicationController
       if @myfile.save
         format.html { redirect_to @myfile, notice: 'Myfile was successfully created.' }
         format.json { render :show, status: :created, location: @myfile }
-        NotificationMailer.send_confirm_to_user(@myfile,current_user).deliver
+        ArticleMailer.art_new_mailer(@myfile,current_user).deliver
       else
         format.html { render :new }
         format.json { render json: @myfile.errors, status: :unprocessable_entity }

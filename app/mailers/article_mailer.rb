@@ -11,4 +11,5 @@ class ArticleMailer < ApplicationMailer
     ) do |format|
       format.text
     end
+  end
 end
