@@ -59,7 +59,6 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  if Rails.env.production?
     config.action_mailer.raise_delivery_errors = true
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
@@ -71,9 +70,5 @@ Rails.application.configure do
       authentication:       'login',
       enable_starttls_auto: true
     }
-  elsif Rails.env.development?
-    ActionMailer::Base.delivery_method = :letter_opener
-  else
-    ActionMailer::Base.delivery_method = :test
-  end
+  
 end
