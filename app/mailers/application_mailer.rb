@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from:     "メールテスト運営局"
-  layout 'art_new'
+  default from: 'jungle事務局'
+  layout 'mailer'
 end
