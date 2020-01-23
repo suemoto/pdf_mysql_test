@@ -34,9 +34,10 @@ class MyfilesController < ApplicationController
 
     respond_to do |format|
       if @myfile.save
+        ArticleMailer.art_new_mailer(@myfile,current_user).deliver
         format.html { redirect_to @myfile, notice: 'Myfile was successfully created.' }
         format.json { render :show, status: :created, location: @myfile }
-        ArticleMailer.art_new_mailer(@myfile,current_user).deliver
+        
       else
         format.html { render :new }
         format.json { render json: @myfile.errors, status: :unprocessable_entity }
