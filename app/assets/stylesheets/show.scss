@@ -6,11 +6,24 @@
   }
   &__comment {
     font-size: 30px;
+    
   }
-
-#gmap {
-  height: 300px;
-  width: 400px;
-  
-}
+  &__document {
+    font-size: 25px;
+  }
+  &__address {
+    font-size: 25px;
+  }
+  .item {
+      padding: 10px 0;
+    }
+  #gmap {
+    height: 300px;
+    width: 400px;
+    padding: 10px 0;
+    
+  }
+  .art-edit-btn {
+    font-size: large;
+  }
 }

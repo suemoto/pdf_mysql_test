@@ -5,13 +5,16 @@
 
     = @myfile.title
   .art-show-main__comment
-    概要
+    .item
+      概要
     = @myfile.comment
-  %td
-    資料
+  .art-show-main__document
+    .item
+      資料
     = link_to @myfile.filename ,donwload_pdf_path(@myfile), :class => 'btn btn-default btn-xs'
-  .address
-    開催場所・住所
+  .art-show-main__address
+    .item
+      開催場所・住所
     #address
       = @myfile.address
 
@@ -49,9 +52,9 @@
   #gmap
 
   - if user_signed_in? && current_user.id == @myfile.user_id 
-    = link_to '記事編集', edit_myfile_path(@myfile)
+    = link_to '記事編集', edit_myfile_path(@myfile), class:"art-edit-btn"
 
-    = link_to '記事削除', @myfile, method: :delete, data: { confirm: 'Are you sure?' }
+    = link_to '記事削除', @myfile, method: :delete, data: { confirm: 'Are you sure?' }, class:"art-delete-btn"
 
   = link_to '戻る', myfiles_path
 
