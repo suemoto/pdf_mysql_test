@@ -1,48 +1,57 @@
 -# %p#notice= notice
-%p
-  = @myfile.title
-%p
-  = @myfile.comment
-%td= link_to @myfile.filename ,donwload_pdf_path(@myfile), :class => 'btn btn-default btn-xs'
-#address
-  = @myfile.address
+= render "header"
+.art-show-main
+  .art-show-main__title
 
-%script{:async => "", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAP_API']}&callback=initMap"}
-:javascript
-  var map;
-  var marker;
-  var geocoder;
-  var art_address = document.getElementById('address').innerText;
-  function initMap() {
-    geocoder = new google.maps.Geocoder();
-    geocoder.geocode({
-    'address': art_address  //住所
-    }, function(results, status) {
-      if (status === google.maps.GeocoderStatus.OK) {
-      map = new google.maps.Map(document.getElementById('gmap'), {
-        center: results[0].geometry.location,
-        zoom: 17 //ズーム
+    = @myfile.title
+  .art-show-main__comment
+    概要
+    = @myfile.comment
+  %td
+    資料
+    = link_to @myfile.filename ,donwload_pdf_path(@myfile), :class => 'btn btn-default btn-xs'
+  .address
+    開催場所・住所
+    #address
+      = @myfile.address
+
+  %script{:async => "", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAP_API']}&callback=initMap"}
+  :javascript
+    var map;
+    var marker;
+    var geocoder;
+    var art_address = document.getElementById('address').innerText;
+    function initMap() {
+      geocoder = new google.maps.Geocoder();
+      geocoder.geocode({
+      'address': art_address  //住所
+      }, function(results, status) {
+        if (status === google.maps.GeocoderStatus.OK) {
+        map = new google.maps.Map(document.getElementById('gmap'), {
+          center: results[0].geometry.location,
+          zoom: 17 //ズーム
+        });
+      marker = new google.maps.Marker({
+      position: results[0].geometry.location,
+      map: map
       });
-    marker = new google.maps.Marker({
-    position: results[0].geometry.location,
-    map: map
+      infoWindow = new google.maps.InfoWindow({
+      content: '<h4>ツールチップのタイトル</h4>'
+      });
+      marker.addListener('click', function() {
+        infoWindow.open(map, marker);
+      });
+      } else {
+        alert(status);
+      }
     });
-    infoWindow = new google.maps.InfoWindow({
-    content: '<h4>ツールチップのタイトル</h4>'
-    });
-    marker.addListener('click', function() {
-      infoWindow.open(map, marker);
-    });
-    } else {
-      alert(status);
     }
-  });
-  }
-#gmap
+  #gmap
 
-- if user_signed_in? && current_user.id == @myfile.user_id 
-  = link_to 'Edit', edit_myfile_path(@myfile)
+  - if user_signed_in? && current_user.id == @myfile.user_id 
+    = link_to '記事編集', edit_myfile_path(@myfile)
 
-  = link_to 'Destroy', @myfile, method: :delete, data: { confirm: 'Are you sure?' }
+    = link_to '記事削除', @myfile, method: :delete, data: { confirm: 'Are you sure?' }
 
-= link_to 'Back', myfiles_path
+  = link_to '戻る', myfiles_path
+
