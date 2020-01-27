@@ -2,6 +2,7 @@
   padding: 10px 100px;
   height: 120px;
   display: flex;
+  background-color: #3CB371;
   // border-bottom: 1px solid gray;
   box-shadow: rgba(0,0,0,0.18)0px 2px 0px;
   .logo-link {
@@ -33,7 +34,7 @@
       width: 600px;
       border-radius: 5px;
       border: 1px solid gray;
-      
+      background-color: white;
     }
     &__btn {
       display: flex;

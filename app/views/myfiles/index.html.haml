@@ -10,5 +10,5 @@
           = link_to "myfiles/#{myfile.id}", class:"art-show-link" do
             = myfile.title.truncate(43, omission: '...')
           .title-block__venue
-            開催都道府県
+            = myfile.address
           
