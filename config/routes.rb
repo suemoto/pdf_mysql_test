@@ -2,7 +2,12 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'myfiles#index'
   get 'myfiles/downloadpdf/:id'=> 'myfiles#downloadpdf' ,as: :donwload_pdf
-  resources :myfiles 
+  
+  resources :myfiles do
+    collection do 
+      get :search
+    end
+  end
     # get 'myfiles/downloadpdf/download'=> 'myfiles#downloadpdf'
   
   
