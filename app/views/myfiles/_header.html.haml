@@ -6,6 +6,9 @@
         Jungle
   .header__right
     .header__right__search
+      = form_with(local: true, url:search_myfiles_path, method: :get) do |form|
+        = form.text_field :keyword, placeholder: "キーワードで記事を検索できます"
+        = form.submit "submit",id:"search-submit"
     - if user_signed_in?
       .header__right__btn
         -# = link_to("myfiles/new",id:"sign-up") do
