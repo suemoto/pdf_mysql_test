@@ -9,10 +9,12 @@
       = form_with(local: true, url:search_myfiles_path, method: :get) do |form|
         .header__right__search__wrapper
           = form.text_field :keyword, placeholder: "キーワードで記事を検索できます", class: "search-text_field"
-          = form.label :submit, class:'search-btn-label' do
-            %i.fas.fa-search
+          .search-btn-zone
+            = form.label :submit, class:'search-btn-label' do
+              
+              %i.fas.fa-search
 
-            = form.submit "submit",id:"search-submit"
+              = form.submit "submit",class:"search-submit"
     - if user_signed_in?
       .header__right__btn
         -# = link_to("myfiles/new",id:"sign-up") do
