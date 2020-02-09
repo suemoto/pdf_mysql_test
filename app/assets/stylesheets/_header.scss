@@ -43,25 +43,26 @@
         box-sizing: border-box;
         font-size: 25px;
         }
-        // .search-btn-label{
+        .search-btn-label{
 
-        // }
+        
           .search-btn-zone {
-            .search-btn-label{
+            
             .fa-search {
-              font-size: 35px;
+              font-size: 30px;
               background-color: white;
               
+              
             }
-            .search-submit {
+            #search_submit {
                   display: none;  
                   // background-color: #123456;
                   height: 100%;
                   width: 100%;
                 }
-              }
+              
           }
-        
+        }
       }
       
     }
