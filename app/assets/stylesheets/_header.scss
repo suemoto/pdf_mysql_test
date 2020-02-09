@@ -47,17 +47,19 @@
 
         // }
           .search-btn-zone {
+            .search-btn-label{
             .fa-search {
-              font-size: 50px;
-
+              font-size: 35px;
+              background-color: white;
               
             }
             .search-submit {
                   display: none;  
-                  background-color: #123456;
+                  // background-color: #123456;
                   height: 100%;
                   width: 100%;
                 }
+              }
           }
         
       }

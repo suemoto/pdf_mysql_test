@@ -65,3 +65,4 @@ gem 'haml-rails'
 gem 'active_hash'
 gem 'rails_12factor', group: :production
 gem 'devise'
+gem 'font-awesome-sass'
