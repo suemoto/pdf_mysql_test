@@ -43,26 +43,32 @@
         box-sizing: border-box;
         font-size: 25px;
         }
-        .search-btn-label{
 
-        
-          .search-btn-zone {
-            
-            .fa-search {
-              font-size: 30px;
-              background-color: white;
-              
-              
+        .search-btn-label{
+     
+            .icon-zone {
+              top: 10px;
+              height: 52px;
+       
+              .fa-search {
+                font-size: 30px;
+                background-color: white;
+                padding: 10px 5px;
+                top: 10px;
+                color: gray;
+                
+              }
+              #search_submit {
+                display: none;  
+
+                height: 100%;
+                width: 100%;
+              }
+                
             }
-            #search_submit {
-                  display: none;  
-                  // background-color: #123456;
-                  height: 100%;
-                  width: 100%;
-                }
-              
-          }
+          
         }
+      
       }
       
     }

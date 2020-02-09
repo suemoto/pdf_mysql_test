@@ -11,7 +11,8 @@
           = form.text_field :keyword, placeholder: "キーワードで記事を検索できます", class: "search-text_field"
           
           = form.label :search_submit, class:'search-btn-label' do
-            .search-btn-zone
+
+            .icon-zone
               %i.fas.fa-search
 
               = form.submit "submit", id:"search_submit"
