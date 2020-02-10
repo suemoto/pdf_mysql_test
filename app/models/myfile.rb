@@ -3,7 +3,7 @@ class Myfile < ApplicationRecord
   belongs_to :user
 
   def self.search(search)
-    return Item.all unless search
-    Item.where('name LIKE(?)', "%#{search}%")
+    return Myfile.all unless search
+    Myfile.where('title LIKE(?)', "%#{search}%")
   end
 end
