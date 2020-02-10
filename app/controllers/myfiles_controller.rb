@@ -76,6 +76,8 @@ class MyfilesController < ApplicationController
 
   def search
     @myfiles = Myfile.search(params[:keyword])
+    
+    # @search = params[:keyword]
   end
 
   private

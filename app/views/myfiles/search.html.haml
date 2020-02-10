@@ -1,1 +1,7 @@
-= render "art_index"
+= render "header"
+.art-index-wrapper
+  
+  .art-index-main
+    .art-index-main__new
+      - "#{@search}"
+    = render "art_index"
