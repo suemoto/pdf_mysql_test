@@ -89,6 +89,8 @@
         color: white;
         display: block;
         position: relative;
+        padding: 12px;
+       
       }
       .sign-out {
         text-align: center;
@@ -101,6 +103,9 @@
         margin-right: 10px;
         display: block;
         position: relative;
+        padding: 12px 0 ;
+        background-color: white;
+
       }
       #sign-up {
         text-align: center;
@@ -113,6 +118,8 @@
         margin-right: 10px;
         display: block;
         position: relative;
+        // padding: 10px 0;
+        // font-size: 10px;
         .sign-up {
           position: absolute;
           top: 50%;
@@ -140,6 +147,7 @@
           left: 50%;
           -webkit-transform : translate(-50%,-50%);
           transform : translate(-50%,-50%);
+          padding: 10px;
         }
         
       }
