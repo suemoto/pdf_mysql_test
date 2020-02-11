@@ -85,17 +85,17 @@
         width: 100px;
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: #123456;
+        background-color: darkslategray;
         color: white;
         display: block;
         position: relative;
         padding: 12px;
-       
+        font-weight: bold;
       }
       .sign-out {
         text-align: center;
         text-decoration: none;
-        border: 2px solid #123456;
+        border: 2px solid black;
         height: 45px;
         width: 100px;
         box-sizing: border-box;
@@ -105,7 +105,7 @@
         position: relative;
         padding: 12px 0 ;
         background-color: white;
-
+        font-weight: bold;
       }
       #sign-up {
         text-align: center;
