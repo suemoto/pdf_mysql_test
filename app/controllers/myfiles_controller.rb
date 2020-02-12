@@ -74,6 +74,13 @@ class MyfilesController < ApplicationController
     send_file(filepath, :filename => myfile.filename, :length => stat.size)
   end
 
+  def search
+    @myfiles = Myfile.search(params[:keyword])
+    @search = params[:keyword]
+    # binding.pry
+    
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_myfile
