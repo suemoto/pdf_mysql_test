@@ -75,7 +75,7 @@ class MyfilesController < ApplicationController
   end
 
   def search
-    @myfiles = Myfile.search(params[:keyword])
+    @myfiles = Myfile.search(params[:keyword]).order("created_at DESC").page(params[:page]).per(10)
     @search = params[:keyword]
     # binding.pry
     
