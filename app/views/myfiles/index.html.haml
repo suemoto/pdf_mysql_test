@@ -5,11 +5,4 @@
     .art-index-main__new
       新着記事
     = render "art_index"  
-    -# .art-index-main__contents  
-    -#   - @myfiles.each do |myfile|
-    -#     .title-block
-    -#       = link_to "myfiles/#{myfile.id}", class:"art-show-link" do
-    -#         = myfile.title.truncate(43, omission: '...')
-    -#       .title-block__venue
-    -#         = myfile.address
-          
+  = paginate @myfiles

@@ -5,7 +5,7 @@ class MyfilesController < ApplicationController
   # GET /myfiles
   # GET /myfiles.json
   def index
-    @myfiles = Myfile.all.order("created_at DESC")
+    @myfiles = Myfile.order("created_at DESC").page(params[:page]).per(10)
   end
 
   # GET /myfiles/1
@@ -75,7 +75,7 @@ class MyfilesController < ApplicationController
   end
 
   def search
-    @myfiles = Myfile.search(params[:keyword])
+    @myfiles = Myfile.search(params[:keyword]).order("created_at DESC").page(params[:page]).per(10)
     @search = params[:keyword]
     # binding.pry
     
