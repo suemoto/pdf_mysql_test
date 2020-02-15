@@ -1,0 +1,10 @@
+.site-description {
+  background-color: #123456;
+  height: 400px;
+  margin: 0 100px;
+  &__image {
+    height: 400px;
+    width: inherit;
+    
+  }
+}
