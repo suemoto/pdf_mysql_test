@@ -4,7 +4,7 @@
 
 .art-form-main {
   width: 500px;
-  padding: 40px;
+  padding: 40px 0;
   .art-title{
     height: 40px;
     width: 500px;
@@ -49,6 +49,11 @@
       font-size: 15px;
 
     }
+  }
+  .art-address {
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
   }
 }
 .art-show-link {
