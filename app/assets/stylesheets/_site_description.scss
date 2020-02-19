@@ -1,0 +1,19 @@
+.site-description {
+  background-color: #eeeeee;
+  height: 400px;
+  margin: 0 100px;
+  display: flex;
+  padding: 0 100px;
+  &__sentence {
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto 50px;
+  }
+  &__image {
+    height: 100%;
+    
+    // margin-left: 40%;
+    display: block;
+    
+  }
+}
