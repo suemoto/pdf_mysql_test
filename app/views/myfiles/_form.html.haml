@@ -30,3 +30,7 @@
         = form.text_field :address, placeholder:"開催する住所を入力してください", class: "art-address"
     .art-submit-container
       = form.submit "作成", id:"art-submit"
+    = link_to(myfiles_path, class:"art-form-return-link") do
+      #art-form-return-link
+        .art-form-return
+          戻る
