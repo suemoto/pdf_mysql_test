@@ -11,7 +11,11 @@
   .art-show-main__document
     .item
       資料
-    = link_to @myfile.filename ,donwload_pdf_path(@myfile), :class => 'btn btn-default btn-xs'
+    - if @myfile.filename
+      = link_to @myfile.filename ,donwload_pdf_path(@myfile), :class => 'btn btn-default btn-xs'
+    - else 
+      .none
+        添付資料はありません
   .art-show-main__address
     .item
       開催場所・住所
