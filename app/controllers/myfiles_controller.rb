@@ -26,11 +26,12 @@ class MyfilesController < ApplicationController
   # POST /myfiles.json
   def create
     @myfile = Myfile.create(myfile_params)
-
-    file = myfile_params[:file]
-    file_name = file.original_filename
-    @myfile.filename= file.original_filename
-    result = uploadpdf(file,file_name)
+    if myfile_params[:file]
+      file = myfile_params[:file]
+      file_name = file.original_filename
+      @myfile.filename= file.original_filename
+      result = uploadpdf(file,file_name)
+    end
 
     respond_to do |format|
       if @myfile.save
