@@ -20,13 +20,17 @@
     %div
       = form.label :file, "資料を添付できます", class:"art-label" do
         %p.art-new-p 添付資料
-        .art-file
-          ここをクリックしてファイルをアップロードできます
+        -# .art-file
+        -#   ここをクリックしてファイルをアップロードできます
 
-        = form.file_field :file, class:"art-document"
+        = form.file_field :file
     %div
       = form.label :address, "開催住所", class:"art-label" do
         %p.art-new-p 開催住所
         = form.text_field :address, placeholder:"開催する住所を入力してください", class: "art-address"
     .art-submit-container
       = form.submit "作成", id:"art-submit"
+    = link_to(myfiles_path, class:"art-form-return-link") do
+      #art-form-return-link
+        .art-form-return
+          戻る

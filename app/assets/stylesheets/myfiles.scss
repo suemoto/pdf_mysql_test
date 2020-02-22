@@ -31,10 +31,19 @@
     width: 500px;
     border: 1px solid black;
   }
-  .art-document {
-    display: none;
+  
+  #myfile_file {
+    // display: none;
     box-sizing: border-box;
+    height: 30px;
+    width: 100%;
+    font-size: 100%;
 
+  }
+  .art-address {
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
   }
   .art-submit-container {
     text-align: center;
@@ -50,10 +59,21 @@
 
     }
   }
-  .art-address {
-    height: 40px;
-    width: 100%;
-    font-size: 20px;
+  .art-form-return-link {
+    text-align: center;
+    padding: auto;
+    text-decoration: none;
+    #art-form-return-link {
+      background-color: #eeeeee;
+      height: 50px;
+      width: 200px;
+      margin: 0 auto;
+      .art-form-return {
+        padding: 17px;
+        margin: 0 auto;
+
+      }
+    }
   }
 }
 .art-show-link {
