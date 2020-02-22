@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+user_name:       testuser
+e-mail address:  testuser@jungle.com
+password:        testuser
