@@ -9,7 +9,7 @@
           - myfile.errors.full_messages.each do |message|
             %li= message
     %div
-      = form.collection_select :art_tags_id, ArtTag.all, :id, :name
+      = form.collection_select :art_tags_id, ArtTag.all, :id, :name, { include_blank: "タグを選択して下さい", selected: ArtTag.all.length + 1 }
     %div  
       = form.label :title, class:"art-label" do
         %p.art-new-p タイトル
