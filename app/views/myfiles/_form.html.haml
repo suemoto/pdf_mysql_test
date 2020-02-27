@@ -8,6 +8,8 @@
         %ul
           - myfile.errors.full_messages.each do |message|
             %li= message
+    %div
+      = form.collection_select :art_tags_id, ArtTag.all, :id, :name
     %div  
       = form.label :title, class:"art-label" do
         %p.art-new-p タイトル
