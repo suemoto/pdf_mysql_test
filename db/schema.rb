@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_27_144451) do
+ActiveRecord::Schema.define(version: 2020_02_27_131725) do
 
   create_table "myfiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_01_27_144451) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.string "address"
+    t.integer "art_tags_id"
     t.index ["user_id"], name: "index_myfiles_on_user_id"
   end
 
