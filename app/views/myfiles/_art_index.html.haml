@@ -6,3 +6,6 @@
         = myfile.title.truncate(43, omission: '...')
       .title-block__venue
         = myfile.address
+        - if myfile.art_tags_id?
+          = link_to "#", class: "tag-link" do
+            = ArtTag.find(myfile.art_tags_id).name
