@@ -90,7 +90,7 @@ class MyfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def myfile_params
-      params.require(:myfile).permit(:title, :file, :comment, :address).merge(user_id: current_user.id)
+      params.require(:myfile).permit(:title, :file, :comment, :address, :art_tags_id).merge(user_id: current_user.id)
     end
 
     def uploadpdf(file_object,file_name)
