@@ -2,8 +2,9 @@
 = render "header"
 .art-show-main
   .art-show-main__title
-
     = @myfile.title
+  = link_to "#", class: "art-show-main__tag" do
+    = ArtTag.find(@myfile.art_tags_id).name
   .art-show-main__comment
     .item
       概要
