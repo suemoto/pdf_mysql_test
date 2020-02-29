@@ -8,4 +8,7 @@ class Myfile < ApplicationRecord
     return Myfile.all unless search
     Myfile.where('title LIKE(?)', "%#{search}%")
   end
+  def self.tag_search(tag)
+    Myfile.where(art_tags_id = tag)
+  end
 end

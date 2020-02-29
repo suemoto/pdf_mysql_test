@@ -82,7 +82,7 @@ class MyfilesController < ApplicationController
     
   end
   def tag
-    @myfiles = Myfile.find(params[:art_tags_id])
+    @myfiles = Myfile.tag_search(params[:art_tags_id]).order("created_at DESC").page(params[:page]).per(10)
   end
   private
     # Use callbacks to share common setup or constraints between actions.

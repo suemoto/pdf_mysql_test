@@ -8,6 +8,9 @@ Rails.application.routes.draw do
       get :search
       get :tag
     end
+    # member do
+    #   get :tag
+    # end
   end
     # get 'myfiles/downloadpdf/download'=> 'myfiles#downloadpdf'
   
