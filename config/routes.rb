@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :myfiles do
     collection do 
       get :search
+      get :tag
     end
   end
     # get 'myfiles/downloadpdf/download'=> 'myfiles#downloadpdf'

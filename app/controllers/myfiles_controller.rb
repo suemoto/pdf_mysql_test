@@ -81,7 +81,9 @@ class MyfilesController < ApplicationController
     # binding.pry
     
   end
-
+  def tag
+    
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_myfile
